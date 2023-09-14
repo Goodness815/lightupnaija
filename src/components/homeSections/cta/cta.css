@@ -1,0 +1,46 @@
+.cta-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--green-600);
+}
+
+.cta-inner {
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta-inner h1 {
+    color: var(--white);
+    text-align: center;
+    font-family: var(--poppins);
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.cta-inner p {
+    color: var(--white);
+    text-align: center;
+    font-family: var(--poppins);
+    font-size: 25px;
+    font-weight: 400;
+    max-width: 80%;
+    margin-top: 20px;
+}
+
+.cta-inner button {
+    color: var(--white);
+    border: none;
+    font-family: var(--poppins);
+    padding: 15px 120px;
+    border-radius: 10px;
+    background: var(--green-700, #1B7339);
+    font-size: 15px;
+    font-weight: 700;
+    margin-top: 30px;
+    cursor: pointer;
+}

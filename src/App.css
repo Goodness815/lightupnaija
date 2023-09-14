@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Outfit:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Outfit:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --green-950: #082B15;
+  --green-900: #184F2C;
+  --green-800: #1B6033;
+  --green-700: #1B7339;
+  --green-600: #209949;
+  --green-500: #2DBA5C;
+  --green-400: #54D47F;
+  --green-300: #8DE8AB;
+  --green-200: #BFF3CF;
+  --green-100: #DEFAE7;
+  --green-50: #F1FCF4;
+  --white: white;
+  --black: black;
+  --irish: 'Irish Grover', cursive;
+  --poppins: 'Poppins', sans-serif;
+  ;
+  ;
+}
