@@ -1,7 +1,9 @@
 import './authentication.css'
 function LoginForm() {
   return (
-    <div>LoginForm</div>
+    <div>
+      
+    </div>
   )
 }
 

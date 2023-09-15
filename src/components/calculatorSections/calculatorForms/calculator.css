@@ -3,6 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: var(--offwhite);
 }
 
 .loadcalculator-container {
@@ -186,6 +187,7 @@ input[type="number"]::-webkit-clear-button {
     color: var(--green-700);
     font-family: var(--poppins);
     font-size: .9rem;
+    background-color: var(--offwhite);
     font-weight: 500;
 }
 
@@ -199,6 +201,7 @@ input[type="number"]::-webkit-clear-button {
     padding: 20px;
     color: var(--green-700);
     font-family: var(--poppins);
+    background-color: var(--offwhite);
     font-size: .9rem;
     font-weight: 500;
 }

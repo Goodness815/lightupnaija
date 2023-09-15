@@ -34,7 +34,7 @@ function Navbar({ navLinks }: navbarProps) {
     <div>
       <div
         className="navbar-container"
-        style={{ backgroundColor: isScrolled ? "white" : "transparent" }}
+        style={{ backgroundColor: isScrolled ? "#FFFFF0" : "transparent" }}
       >
         <div className="navbar-inner">
           <div className="navbar-left">
@@ -59,7 +59,9 @@ function Navbar({ navLinks }: navbarProps) {
                 <Link to="/">Projects</Link>
               </li>
               <li>
-                <button>Log In</button>
+                <Link to='/login'>
+                  <button>Log In</button>
+                </Link>
               </li>
             </ul>
           </div>

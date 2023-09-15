@@ -1,8 +1,10 @@
 .works-container {
     min-height: 100vh;
+    padding-bottom: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: var(--offwhite);
 }
 
 .works-inner {
