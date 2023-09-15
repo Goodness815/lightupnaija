@@ -2,7 +2,12 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/light-up-naija-trade-mark-1.png";
 import { useEffect, useState } from "react";
 import "./navbar.css";
-function Navbar() {
+
+interface navbarProps {
+  navLinks: Boolean;
+}
+
+function Navbar({ navLinks }: navbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
 
   // Function to handle the scroll event
@@ -36,7 +41,10 @@ function Navbar() {
             <img src={logo} alt="lightUpNaija Logo" />
             LightUpNaija
           </div>
-          <div className="navbar-right">
+          <div
+            className="navbar-right"
+            style={{ display: !navLinks ? "none" : "block" }}
+          >
             <ul className="navbar-ul">
               <li>
                 <Link to="/">About Us</Link>

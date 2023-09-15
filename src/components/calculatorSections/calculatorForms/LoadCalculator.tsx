@@ -9,22 +9,22 @@ function LoadCalculator({ setIsShown }: calculatorProps) {
       <form className="loadcalculator-form">
         <h1>Your Calculation</h1>
         <div className="form-item">
-          <label htmlFor="">Choose Device</label>
-          <select name="" id="">
+          <label htmlFor="device">Choose Device</label>
+          <select name="device" required>
             <option value="">Choose Device</option>
           </select>
         </div>
         <div className="form-item">
-          <label htmlFor="">Power Rating</label>
-          <input type="number" name="" id="" />
+          <label htmlFor="rating">Power Rating (watts)</label>
+          <input type="number" name="rating" required />
         </div>
         <div className="form-item">
-          <label htmlFor="">Quantity</label>
-          <input type="number" name="" id="" />
+          <label htmlFor="quantity">Quantity</label>
+          <input type="number" name="quantity" required />
         </div>
         <div className="form-item">
-          <label htmlFor="">Hours of daily use</label>
-          <input type="number" name="" id="" />
+          <label htmlFor="usageHours">Hours of daily use</label>
+          <input type="number" name="usageHours" required />
         </div>
         <button>Add</button>
       </form>

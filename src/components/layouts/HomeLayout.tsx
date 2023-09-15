@@ -9,7 +9,7 @@ interface HomeLayoutProps {
 function HomeLayout({ children }: HomeLayoutProps) {
   return (
     <>
-      <Navbar />
+      <Navbar navLinks={true} />
       {children}
       <Footer />
     </>
