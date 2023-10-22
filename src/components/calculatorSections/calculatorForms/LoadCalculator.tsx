@@ -1,9 +1,37 @@
 import { IoMdClose } from "react-icons/io";
 import "./calculator.css";
+import { useEffect, useState } from "react";
+import axios from "axios";
 interface calculatorProps {
   setIsShown: Function;
 }
 function LoadCalculator({ setIsShown }: calculatorProps) {
+  const [appliances, setAppliances] = useState([]);
+
+  useEffect(() => {
+    const apiUrl = "https://api.watttime.org/api/v1/data";
+
+    // Replace 'YOUR_API_KEY' with your actual API key (if required by the API).
+    const apiKey = "";
+
+    axios
+      .get(apiUrl, {
+        headers: {
+          Authorization: `Bearer ${apiKey}`,
+        },
+      })
+      .then((response) => {
+        setAppliances(response.data); // Handle the API response data as needed
+        // setLoading(false);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+        // setLoading(false);
+      });
+  }, []);
+
+  console.log(appliances);
+
   return (
     <div className="loadcalculator-container">
       <form className="loadcalculator-form">
