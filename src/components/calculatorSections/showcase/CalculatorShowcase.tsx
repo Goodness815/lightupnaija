@@ -20,11 +20,11 @@ function CalculatorShowcase({ isShown }: showcaseProps) {
         </div>
       ) : (
         <div className="calculator-left">
-          <h1>ENERGY AUDIT</h1>
+          <h1>POWER AS A SERVICE</h1>
           <p>
-            "To find the right solution, Imperium will review how much energy
-            you currently use and what you need. After this, we'll figure out
-            how much of your energy can come from renewable sources."
+            LightUpNaija offers hassle-free clean energy solutions. With 'Power
+            as a Service,' enjoy reliable power at zero upfront cost, paying
+            only a fixed tariff based on your chosen solution.
           </p>
         </div>
       )}

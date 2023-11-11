@@ -1,12 +1,15 @@
 import SignUpForm from "../../components/authentication/SignUpForm";
-import HomeLayout from "../../components/layouts/HomeLayout";
+import Footer from "../../components/footer/Footer";
+import Navbar from "../../components/navbar/Navbar";
 
 function SignUp() {
-  return <div>
-    <HomeLayout>
+  return (
+    <div>
+      <Navbar navLinks={false} />
       <SignUpForm />
-    </HomeLayout>
-  </div>;
+      <Footer />
+    </div>
+  );
 }
 
 export default SignUp;

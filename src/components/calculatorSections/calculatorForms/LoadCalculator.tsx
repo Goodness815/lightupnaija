@@ -1,58 +1,115 @@
 import { IoMdClose } from "react-icons/io";
 import "./calculator.css";
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { useState } from "react";
+// import axios from "axios";
 interface calculatorProps {
   setIsShown: Function;
 }
 function LoadCalculator({ setIsShown }: calculatorProps) {
-  const [appliances, setAppliances] = useState([]);
+  const appliances = [
+    {
+      appliance: "Refrigerator",
+      powerRating: 150,
+    },
+    {
+      appliance: "Washing Machine",
+      powerRating: 400,
+    },
+    {
+      appliance: "Microwave Oven",
+      powerRating: 1200,
+    },
+    {
+      appliance: "Light",
+      powerRating: 20,
+    },
+    {
+      appliance: "Fan",
+      powerRating: 40,
+    },
+    {
+      appliance: "Phone",
+      powerRating: 20,
+    },
+    {
+      appliance: "Television",
+      powerRating: 80,
+    },
+    {
+      appliance: "Home Sound System",
+      powerRating: 50,
+    },
+    // Add more appliances as needed
+  ];
+  const [load, setLoad]: any = useState([]);
+  const [formData, setFormData]: any = useState([]);
 
-  useEffect(() => {
-    const apiUrl = "https://api.watttime.org/api/v1/data";
+  const onInputChange = (event: any) => {
+    const { name, value } = event.target;
 
-    // Replace 'YOUR_API_KEY' with your actual API key (if required by the API).
-    const apiKey = "";
+    setFormData((prevData: any) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
 
-    axios
-      .get(apiUrl, {
-        headers: {
-          Authorization: `Bearer ${apiKey}`,
-        },
-      })
-      .then((response) => {
-        setAppliances(response.data); // Handle the API response data as needed
-        // setLoading(false);
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-        // setLoading(false);
-      });
-  }, []);
+  const handleAdd = (event: any) => {
+    event.preventDefault();
+    console.log("logged");
+    return setLoad([...load, formData]);
+  };
 
-  console.log(appliances);
+  const removeLoad = (index: any) => {
+    const updatedLoad = [...load];
+    updatedLoad.splice(index, 1);
+    setLoad(updatedLoad);
+  };
+
+  console.log(formData);
 
   return (
     <div className="loadcalculator-container">
-      <form className="loadcalculator-form">
+      <form className="loadcalculator-form" onSubmit={handleAdd}>
         <h1>Your Calculation</h1>
         <div className="form-item">
           <label htmlFor="device">Choose Device</label>
-          <select name="device" required>
-            <option value="">Choose Device</option>
+          <select onChange={onInputChange} name="device" required>
+            <option>Choose Device</option>
+            {appliances.map((value, i) => {
+              return (
+                <option key={i} value={value.appliance}>
+                  {value.appliance}
+                </option>
+              );
+            })}
           </select>
         </div>
         <div className="form-item">
           <label htmlFor="rating">Power Rating (watts)</label>
-          <input type="number" name="rating" required />
+          <input
+            type="number"
+            name="rating"
+            onChange={onInputChange}
+            required
+          />
         </div>
         <div className="form-item">
           <label htmlFor="quantity">Quantity</label>
-          <input type="number" name="quantity" required />
+          <input
+            type="number"
+            name="quantity"
+            onChange={onInputChange}
+            required
+          />
         </div>
         <div className="form-item">
           <label htmlFor="usageHours">Hours of daily use</label>
-          <input type="number" name="usageHours" required />
+          <input
+            type="number"
+            name="usageHours"
+            onChange={onInputChange}
+            required
+          />
         </div>
         <button>Add</button>
       </form>
@@ -60,26 +117,29 @@ function LoadCalculator({ setIsShown }: calculatorProps) {
       <div className="loadcalculator-results">
         <h4>Your Appliances</h4>
         <div className="loadresults-flex">
-          <div className="loadresults-flexitem">
-            <div className="loadresults-flexitemleft">
-              <h3>Deep Fryer</h3>
-              <h4>1 | 5 | 3 hrs daily</h4>
-            </div>
-            <div className="loadresults-flexitemright">
-              <IoMdClose className="icons" />
-            </div>
-          </div>
-          <div className="loadresults-flexitem">
-            <div className="loadresults-flexitemleft">
-              <h3>Deep Fryer</h3>
-              <h4>1 | 5 | 3 hrs daily</h4>
-            </div>
-            <div className="loadresults-flexitemright">
-              <IoMdClose className="icons" />
-            </div>
-          </div>
+          {load.map((load: any, index: any) => {
+            return (
+              <div key={index} className="loadresults-flexitem">
+                <div className="loadresults-flexitemleft">
+                  <h3>{load.device}</h3>
+                  <h4>
+                    {load.rating} | {load.quantity} | {load.usageHours} hrs
+                    daily
+                  </h4>
+                </div>
+                <div className="loadresults-flexitemright">
+                  <IoMdClose
+                    className="icons"
+                    onClick={() => removeLoad(index)}
+                  />
+                </div>
+              </div>
+            );
+          })}
 
-          <button onClick={() => setIsShown(false)}>Proceed</button>
+          {load.length >= 1 && (
+            <button onClick={() => setIsShown(false)}>Proceed</button>
+          )}
         </div>
       </div>
     </div>

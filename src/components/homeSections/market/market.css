@@ -1,69 +1,80 @@
 .market-container {
-    min-height: 100vh;
-    background: var(--green-50);
-    padding: 20px 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  min-height: 100vh;
+  background: var(--green-50);
+  padding: 20px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .market-inner {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .market-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .market-top h2 {
-    color: var(--green-700);
-    font-family: var(--poppins);
-    font-size: 30px;
-    font-weight: 700;
+  color: var(--green-700);
+  font-family: var(--poppins);
+  font-size: 30px;
+  font-weight: 700;
 }
 
 .market-top span {
-    padding: 15px 20px;
-    font-size: 25px;
-    border-radius: 8px;
-    color: var(--white);
-    background: var(--green-700);
+  padding: 15px 20px;
+  font-size: 25px;
+  border-radius: 8px;
+  color: var(--white);
+  background: var(--green-700);
 }
 
 .market-bottom {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    gap: 20px;
-    width: 90%;
-    padding: 30px 0px;
-    margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 90%;
+  padding: 30px 0px;
+  margin-top: 20px;
 }
 
 .marketItem {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .marketItem img {
-    width: 280px;
-    height: 230px;
-    object-fit: cover;
+  width: 280px;
+  height: 230px;
+  object-fit: cover;
 }
 
 .marketItem h3 {
-    color: var(--black);
-    font-family: var(--poppins);
-    font-size: 18px;
-    font-weight: 600;
+  color: var(--black);
+  font-family: var(--poppins);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 550px) {
+  .market-top h2 {
+    font-size: 20px;
+  }
+  .market-top span {
+    padding: 8px 15px;
+    font-size: 20px;
+    border-radius: 5px;
+  }
 }

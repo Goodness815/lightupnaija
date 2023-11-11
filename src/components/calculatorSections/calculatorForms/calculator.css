@@ -1,241 +1,282 @@
 .calculator-toggle {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--offwhite);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--offwhite);
 }
 
 .loadcalculator-container {
-    background: var(--green-50, #F1FCF4);
-    width: 75%;
-    min-height: 80vh;
-    padding: 40px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
+  background: var(--green-50, #f1fcf4);
+  width: 75%;
+  min-height: 80vh;
+  padding: 40px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .loadcalculator-form {
-    width: 60%;
+  width: 60%;
 }
 
 .loadcalculator-form h1 {
-    color: var(--black);
-    font-family: var(--poppins);
-    font-size: 25px;
-    font-weight: 600;
+  color: var(--black);
+  font-family: var(--poppins);
+  font-size: 25px;
+  font-weight: 600;
 }
 
 .loadcalculator-form .form-item {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    margin: 20px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 20px 0px;
 }
 
 .loadcalculator-form .form-item input {
-    height: 50px;
-    border-radius: 8px;
-    width: 100%;
-    background: var(--green-50);
-    border: none;
-    border: 2px solid var(--green-700);
-    margin-top: 10px;
-    padding: 0px 20px;
+  height: 50px;
+  border-radius: 8px;
+  width: 100%;
+  background: var(--green-50);
+  border: none;
+  border: 2px solid var(--green-700);
+  margin-top: 10px;
+  padding: 0px 20px;
 }
 
 .loadcalculator-form .form-item select {
-    height: 50px;
-    border-radius: 8px;
-    width: 100%;
-    background: var(--green-50);
-    border: none;
-    border: 2px solid var(--green-700);
-    margin-top: 10px;
-    padding: 0px 20px;
+  height: 50px;
+  border-radius: 8px;
+  width: 100%;
+  background: var(--green-50);
+  border: none;
+  border: 2px solid var(--green-700);
+  margin-top: 10px;
+  padding: 0px 20px;
 }
 
 .loadcalculator-form button {
-    height: 50px;
-    border-radius: 8px;
-    width: 100%;
-    color: var(--white);
-    background: var(--green-700);
-    border: none;
-    font-family: var(--poppins);
-    font-size: 15px;
-    font-weight: 700;
-    cursor: pointer;
+  height: 50px;
+  border-radius: 8px;
+  width: 100%;
+  color: var(--white);
+  background: var(--green-700);
+  border: none;
+  font-family: var(--poppins);
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.loadcalculator-form button:hover {
+  background: var(--green-900);
 }
 
 .loadcalculator-form .form-item input:focus {
-    outline: none;
-    border: 2px solid var(--green-900);
+  outline: none;
+  border: 2px solid var(--green-900);
 }
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-clear-button {
-    -webkit-appearance: none;
-    appearance: none;
-    margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
 }
 
 .loadcalculator-results {
-    width: 30%;
+  width: 30%;
 }
 
 .loadcalculator-results h4 {
-    color: var(--black);
-    font-family: var(--poppins);
-    font-size: 15px;
-    font-weight: 400;
-    margin-top: 10px;
+  color: var(--black);
+  font-family: var(--poppins);
+  font-size: 15px;
+  font-weight: 400;
+  margin-top: 10px;
 }
 
 .loadresults-flex {
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .loadresults-flexitem {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 15px;
-    border-radius: 8px;
-    margin-top: 15px;
-    width: 100%;
-    background: var(--green-700);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-top: 15px;
+  width: 100%;
+  background: var(--green-700);
 }
 
 .loadresults-flexitem h3 {
-    color: var(--white);
-    font-family: var(--poppins);
-    font-size: 15px;
-    font-weight: 400;
+  color: var(--white);
+  font-family: var(--poppins);
+  font-size: 15px;
+  font-weight: 400;
 }
 
 .loadresults-flexitem h4 {
-    color: var(--white);
-    font-family: var(--poppins);
-    font-size: 14px;
-    font-weight: 400;
+  color: var(--white);
+  font-family: var(--poppins);
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .loadresults-flexitemright .icons {
-    color: var(--white) !important;
-    font-size: 20px;
-    cursor: pointer;
+  color: var(--white) !important;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 .loadresults-flex button {
-    border-radius: 10px;
-    border: none;
-    width: 100%;
-    padding: 15px 0px;
-    color: var(--white);
-    margin-top: 30px;
-    font-family: var(--poppins);
-    font-size: 15px;
-    font-weight: 600;
-    background: var(--green-700, #1B7339);
+  border-radius: 10px;
+  border: none;
+  width: 100%;
+  padding: 15px 0px;
+  color: var(--white);
+  margin-top: 30px;
+  font-family: var(--poppins);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  background: var(--green-700);
+  transition: 0.5s ease;
+}
+.loadresults-flex button:hover {
+  background: var(--green-900);
 }
 
-
 .requestquote-container {
-    border-radius: 1rem;
-    border: 2px solid var(--green-700);
-    width: 70%;
-    min-height: 80vh;
-    padding: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  border-radius: 1rem;
+  border: 2px solid var(--green-700);
+  width: 70%;
+  min-height: 80vh;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .requestquote-form {
-    display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+}
+
+.requestquote-form .form-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0px;
+  width: 100%;
+  gap: 20px;
+}
+
+.requestquote-form .form-item input {
+  height: 50px;
+  border-radius: 8px;
+  width: 100%;
+  border: none;
+  border: 2px solid var(--green-700);
+  color: var(--green-700);
+  padding: 0px 20px;
+  color: var(--green-700);
+  font-family: var(--poppins);
+  font-size: 0.9rem;
+  background-color: var(--offwhite);
+  font-weight: 500;
+}
+
+.requestquote-form .form-item textarea {
+  height: 70px;
+  border-radius: 8px;
+  width: 100%;
+  border: none;
+  border: 2px solid var(--green-700);
+  color: var(--green-700);
+  padding: 20px;
+  color: var(--green-700);
+  font-family: var(--poppins);
+  background-color: var(--offwhite);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.requestquote-form button {
+  height: 50px;
+  border-radius: 8px;
+  width: 100%;
+  border: none;
+  color: var(--white);
+  font-family: var(--poppins);
+  background: var(--green-700);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 20px 0px;
+}
+
+.requestquote-form span {
+  color: var(--black);
+  font-family: var(--poppins);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.requestquote-form .form-item textarea::placeholder {
+  color: var(--green-700);
+  font-family: var(--poppins);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.requestquote-form .form-item input::placeholder {
+  color: var(--green-700);
+  font-family: var(--poppins);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 900px) {
+  .loadcalculator-container {
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 90%;
+  }
+  .loadcalculator-form {
+    width: 90%;
+  }
+  .calculator-toggle {
+    padding: 40px 0px;
+  }
+  .loadcalculator-results {
+    margin-top: 50px;
+    width: 90%;
+  }
+  .requestquote-container {
+    width: 90%;
+  }
 }
-
-.requestquote-form .form-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 20px 0px;
+@media screen and (max-width: 550px) {
+  .requestquote-form {
     width: 100%;
-    gap: 20px;
-}
-
-.requestquote-form .form-item input {
-    height: 50px;
-    border-radius: 8px;
-    width: 100%;
-    border: none;
-    border: 2px solid var(--green-700);
-    color: var(--green-700);
-    padding: 0px 20px;
-    color: var(--green-700);
-    font-family: var(--poppins);
-    font-size: .9rem;
-    background-color: var(--offwhite);
-    font-weight: 500;
-}
-
-.requestquote-form .form-item textarea {
-    height: 70px;
-    border-radius: 8px;
-    width: 100%;
-    border: none;
-    border: 2px solid var(--green-700);
-    color: var(--green-700);
-    padding: 20px;
-    color: var(--green-700);
-    font-family: var(--poppins);
-    background-color: var(--offwhite);
-    font-size: .9rem;
-    font-weight: 500;
-}
-
-.requestquote-form button {
-    height: 50px;
-    border-radius: 8px;
-    width: 100%;
-    border: none;
-    color: var(--white);
-    font-family: var(--poppins);
-    background: var(--green-700);
-    font-size: .9rem;
-    font-weight: 500;
-    margin: 20px 0px;
-}
-
-.requestquote-form span {
-    color: var(--black);
-    font-family: var(--poppins);
-    font-size: .8rem;
-    font-weight: 500;
-}
-
-.requestquote-form .form-item textarea::placeholder {
-    color: var(--green-700);
-    font-family: var(--poppins);
-    font-size: .9rem;
-    font-weight: 500;
-}
-
-.requestquote-form .form-item input::placeholder {
-    color: var(--green-700);
-    font-family: var(--poppins);
-    font-size: .9rem;
-    font-weight: 500;
+  }
+  .form-item {
+    flex-direction: column;
+  }
+  .requestquote-form span {
+    text-align: center;
+  }
 }
